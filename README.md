@@ -1,2 +1,33 @@
-# 18csl17-27-COMPUTER-PROGRAMMING-LABORATORY
-18csl17/27 COMPUTER PROGRAMMING LABORATORY
+#include <stdio.h>
+int main()
+{
+	int num1,num2;
+	float result;
+	char ch;	//to store operator choice
+ 	printf("Enter first number: "); 
+	scanf("%d",&num1);
+	printf("Enter second number: "); 
+	scanf("%d",&num2);
+	printf("Choose operation to perform (+,-,*,/,%): ");
+	ch=getch();
+	switch(ch)
+	{
+		case '+': result=num1+num2; break;
+
+		case '-': result=num1-num2; break;
+
+		case '*': result=num1*num2; break;
+
+		case '/': result=(float)num1/(float)num2; break;
+
+		case '%': result=num1%num2; break;
+
+		default:
+		printf("Invalid operation.\n"); getch();
+		return 0;
+	}
+	printf("Result: %d %c %d = %f\n",num1,ch,num2,result);
+	return 0;
+}
+
+
